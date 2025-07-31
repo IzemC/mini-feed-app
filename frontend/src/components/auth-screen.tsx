@@ -16,7 +16,7 @@ export function AuthScreen() {
       <div className="w-full max-w-md bg-white rounded-xl shadow-sm border border-gray-100 p-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-gray-900">
-            Welcome to Mini Feed
+            Welcome to Mini Feed App
           </h2>
           <p className="text-gray-600 mt-2">Enter your name to get started</p>
         </div>
@@ -50,6 +50,7 @@ export function AuthScreen() {
           <SubmitButton
             isLoading={register.isPending}
             disabled={register.isPending}
+            className="mx-auto"
           >
             Continue
           </SubmitButton>

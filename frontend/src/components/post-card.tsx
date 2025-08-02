@@ -1,4 +1,5 @@
 import { CommentSection } from "@/components/comment-section";
+import { Avatar } from "@/components/ui/avatar";
 import { useComments, usePostReactions } from "@/hooks/use-posts";
 import type { Post } from "@/types";
 import { cn } from "@/utils/cn";
@@ -10,7 +11,6 @@ import {
   ThumbsUp,
 } from "lucide-react";
 import { useState } from "react";
-import { Avatar } from "@/components/ui/avatar";
 
 export const PostCard = ({ post }: { post: Post }) => {
   const [showComments, setShowComments] = useState(false);
@@ -37,6 +37,10 @@ export const PostCard = ({ post }: { post: Post }) => {
           <p className="font-medium text-gray-900">{post.authorName}</p>
           <p className="text-gray-500 text-xs">{formatDate(post.createdAt)}</p>
         </div>
+      </div>
+
+      <div className="text-gray-700 text-sm pb-4">
+        <p>{post.content}</p>
       </div>
 
       <div className="flex items-center gap-4 py-3 border-t border-gray-100">
